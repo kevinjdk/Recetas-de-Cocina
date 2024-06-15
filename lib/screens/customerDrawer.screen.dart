@@ -12,23 +12,33 @@ class CustomDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          DrawerHeader(
-            decoration: BoxDecoration(color: Colors.amber),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Image.asset('images/1.jpg', height: 80.0),
-                SizedBox(height: 10),
-                Text(
-                  'Bienvenido',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-                SizedBox(height: 5),
-                Text(
-                  user?.email ?? 'usuario@ejemplo.com',
-                  style: TextStyle(fontSize: 16),
-                ),
-              ],
+          Container(
+            height: 200.0,
+            child: DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.amber,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Image.asset('images/1.jpg', height: 80.0),
+                  SizedBox(height: 10),
+                  Text(
+                    'Bienvenido',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 5),
+                  Text(
+                    user?.email ?? 'usuario@ejemplo.com',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           ListTile(
@@ -42,7 +52,7 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.cookie),
+            leading: Icon(Icons.receipt_long),
             title: Text('Recetas'),
             onTap: () {
               Navigator.pushReplacement(
@@ -52,7 +62,7 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.manage_accounts),
+            leading: Icon(Icons.cookie),
             title: Text('Gestionar Recetas'),
             onTap: () {
               Navigator.pushReplacement(

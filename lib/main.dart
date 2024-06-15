@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:recetas_cocina/screens/home.screen.dart';
 import 'package:recetas_cocina/screens/login.screen.dart';
 import 'firebase_options.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home:
-          LoginScreen(), // Asegúrate de que la pantalla de inicio sea LoginScreen
+          HomeScreen(), // Asegúrate de que la pantalla de inicio sea LoginScreen
     );
   }
 }
